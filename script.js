@@ -1,80 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fileInput = document.getElementById('assignmentFile');
-    const fileList = document.getElementById('fileList');
-    const dropZone = document.getElementById('dropZone');
     const bookingForm = document.getElementById('bookingForm');
+    const PHONE_NUMBER = "918593904483"; // Target phone number
 
-    const PHONE_NUMBER = "918593904483";
-
-    // Drag and Drop Effects
-    ['dragenter', 'dragover'].forEach(eventName => {
-        dropZone.addEventListener(eventName, (e) => {
+    // 1. WhatsApp Booking Form Handler
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            dropZone.classList.add('dragover');
-        }, false);
-    });
 
-    ['dragleave', 'drop'].forEach(eventName => {
-        dropZone.addEventListener(eventName, (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            dropZone.classList.remove('dragover');
-        }, false);
-    });
+            const name = document.getElementById('studentName').value.trim();
+            const studentClass = document.getElementById('studentClass').value.trim();
+            const service = document.getElementById('serviceType').value;
+            const phone = document.getElementById('studentPhone').value.trim();
 
-    // Display chosen files
-    fileInput.addEventListener('change', updateFileList);
+            if (!name || !studentClass || !service || !phone) {
+                alert('Please fill out all mandatory fields.');
+                return;
+            }
 
-    function updateFileList() {
-        fileList.innerHTML = '';
-        const files = Array.from(fileInput.files);
+            // Construct formatted WhatsApp booking message
+            const message = 
+                `Hello Sujan (P² Freelancing),%0A%0A` +
+                `I would like to book a service request:%0A` +
+                `• *Name:* ${encodeURIComponent(name)}%0A` +
+                `• *Class/Course:* ${encodeURIComponent(studentClass)}%0A` +
+                `• *Service Requested:* ${encodeURIComponent(service)}%0A` +
+                `• *Phone:* ${encodeURIComponent(phone)}%0A%0A` +
+                `_(please share documents/photos in this chat context.)_`;
 
-        if (files.length === 0) return;
-
-        files.forEach(file => {
-            const item = document.createElement('div');
-            item.className = 'file-item';
-            
-            const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
-            item.innerHTML = `
-                <span>📄 <strong>${file.name}</strong> (${sizeInMB} MB)</span>
-                <span>Ready</span>
-            `;
-            fileList.appendChild(item);
+            const whatsappURL = `https://wa.me/${PHONE_NUMBER}?text=${message}`;
+            window.open(whatsappURL, '_blank');
         });
     }
 
-    // Form Submission & WhatsApp Redirect
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    // 2. Navigation Active State on Scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-        const name = document.getElementById('studentName').value.trim();
-        const studentClass = document.getElementById('studentClass').value.trim();
-        const phone = document.getElementById('studentPhone').value.trim();
-        const files = Array.from(fileInput.files);
+    window.addEventListener('scroll', () => {
+        let currentSection = 'home';
 
-        if (!name || !studentClass || !phone) {
-            alert('Please fill out all required fields.');
-            return;
-        }
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
 
-        let fileDetails = "No file selected";
-        if (files.length > 0) {
-            fileDetails = files.map(f => f.name).join(', ');
-        }
-
-        const whatsappText = 
-            `Hello P² Freelancing! I would like to book assignment help.%0A%0A` +
-            `*Client Details:*%0A` +
-            `• *Name:* ${encodeURIComponent(name)}%0A` +
-            `• *Class/Course:* ${encodeURIComponent(studentClass)}%0A` +
-            `• *Phone:* ${encodeURIComponent(phone)}%0A%0A` +
-            `*Attached Documents:* ${encodeURIComponent(fileDetails)}%0A%0A` +
-            `I am ready to upload my files into this chat.`;
-
-        const whatsappURL = `https://wa.me/${PHONE_NUMBER}?text=${whatsappText}`;
-
-        window.open(whatsappURL, '_blank');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
+            }
+        });
     });
 });

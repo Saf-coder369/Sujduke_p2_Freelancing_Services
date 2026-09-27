@@ -3,111 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P² FREELANCING | Academic & Homework Support</title>
-    <!-- Google Fonts -->
+    <title>P² FREELANCING | Sujan</title>
+    <!-- Google Fonts for Editorial Aesthetic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Fixed Header Navigation -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="brand-logo">
-                <div class="logo-badge-text">P²</div>
-                <div class="brand-text">
-                    <span class="brand-name">P² FREELANCING</span>
-                    <span class="brand-tagline">All you need is payment & prototype</span>
-                </div>
-            </div>
-            <a href="#book-section" class="nav-cta">Book Assistance</a>
+            <a href="#home" class="brand-logo">SUJAN <span>| P² FREELANCING</span></a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#services" class="nav-link">SERVICES</a>
+                <a href="#booking" class="nav-link nav-btn">BOOK NOW</a>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="badge">Fast & Reliable Academic Support</span>
-            <h1>Expert Assistance For Your Homework & Assignments</h1>
-            <p>Get accurate, well-structured solutions delivered on time. Attach your files, specify your requirements, and connect directly via WhatsApp.</p>
+            <span class="subtitle">ACADEMIC & FREELANCE SOLUTIONS</span>
+            <h1>Precision & Academic Excellence Redefined</h1>
+            <p>All you need is payment & prototype.</p>
+            <a href="#services" class="btn-primary">EXPLORE SERVICES</a>
         </div>
     </section>
 
     <!-- Main Container -->
-    <main class="main-container">
-        
-        <!-- Booking Card -->
-        <div class="booking-card" id="book-section">
-            <div class="card-header">
-                <h2>Submit Your Assignment</h2>
-                <p>Fill in the details below to start your request instantly</p>
+    <main>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <span class="section-tag">ABOUT SUJAN</span>
+                    <h2>Dedicated to Crafting Quality Content</h2>
+                    <p>At <strong>P² Freelancing</strong>, managed by Sujan, we provide seamless academic support, document editing, and meticulous handwritten copy work.</p>
+                    <p>Whether you need rapid proofreading, custom report formatting, or neat handwritten copy assignments, every project is handled with precision, accuracy, and absolute confidentiality.</p>
+                </div>
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Writing and Editing">
+                </div>
             </div>
+        </section>
 
-            <form id="bookingForm" novalidate>
-                <div class="form-group">
-                    <label for="studentName">Full Name</label>
-                    <input type="text" id="studentName" placeholder="e.g., Alex Johnson" required>
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">PRICING & OFFERINGS</span>
+                    <h2>Services</h2>
                 </div>
 
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="studentClass">Class / Grade / Course</label>
-                        <input type="text" id="studentClass" placeholder="e.g., 10th Grade / B.Tech" required>
+                <div class="services-grid">
+                    
+                    <!-- Service 1: Editing & Formatting -->
+                    <div class="service-card">
+                        <h3>01. Editing & Formatting</h3>
+                        <ul class="price-list">
+                            <li><span>Proofreading</span> <strong>₹30 – ₹60 / page</strong></li>
+                            <li><span>Grammar + Clarity Editing</span> <strong>₹50 – ₹100 / page</strong></li>
+                            <li><span>Formatting / References</span> <strong>₹50 – ₹150 / doc</strong></li>
+                            <li><span>PPT Formatting / Design</span> <strong>₹100 – ₹300</strong></li>
+                            <li><span>Resume / CV Editing</span> <strong>₹100 – ₹300</strong></li>
+                            <li><span>Short Project / Report Editing</span> <strong>₹200 – ₹500</strong></li>
+                            <li><span>Longer College Report Editing</span> <strong>₹500 – ₹1,500+</strong></li>
+                        </ul>
                     </div>
 
-                    <div class="form-group">
-                        <label for="studentPhone">Phone Number</label>
-                        <input type="tel" id="studentPhone" placeholder="Your WhatsApp Contact No." required>
+                    <!-- Service 2: Leave Letter Drafting -->
+                    <div class="service-card">
+                        <h3>02. Leave Letter Drafting</h3>
+                        <ul class="price-list">
+                            <li><span>Simple Leave Letter</span> <strong>₹10 – ₹20</strong></li>
+                            <li><span>Personalized / Formal Letter</span> <strong>₹20 – ₹30</strong></li>
+                            <li><span>Urgent / Same-Day Request</span> <strong>₹30 – ₹50</strong></li>
+                            <li><span>Bundle of 5 Letters</span> <strong>₹75 – ₹100</strong></li>
+                        </ul>
                     </div>
+
+                    <!-- Service 3: Handwritten Copying -->
+                    <div class="service-card">
+                        <h3>03. Handwritten Copying</h3>
+                        <ul class="price-list">
+                            <li><span>1 Page</span> <strong>₹20 – ₹30</strong></li>
+                            <li><span>5 Pages</span> <strong>₹100 – ₹125</strong></li>
+                            <li><span>10 Pages</span> <strong>₹180 – ₹250</strong></li>
+                            <li><span>20 Pages</span> <strong>₹350 – ₹450</strong></li>
+                            <li><span>30+ Pages</span> <strong>₹15 – ₹20 / page</strong></li>
+                            <li class="custom-note">Regular text: ₹20/page | Tables/Diagrams: ₹30/page | Detailed Work: ₹40+/page | Urgent Same-Day: +₹50</li>
+                        </ul>
+                    </div>
+
                 </div>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label>Upload Assignment (Photos or PDF)</label>
-                    <div class="file-drop-zone" id="dropZone">
-                        <input type="file" id="assignmentFile" accept="image/*,.pdf,.doc,.docx" multiple>
-                        <div class="upload-content">
-                            <div class="upload-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                    <polyline points="17 8 12 3 7 8"/>
-                                    <line x1="12" y1="3" x2="12" y2="15"/>
-                                </svg>
-                            </div>
-                            <p class="upload-text"><strong>Click to upload</strong> or drag and drop</p>
-                            <span class="upload-hint">PDF, DOC, DOCX, PNG, JPG (Multiple files supported)</span>
+        <!-- Booking Section -->
+        <section id="booking" class="booking-section">
+            <div class="container small-container">
+                <div class="booking-card">
+                    <div class="card-header">
+                        <h2>Book Your Service</h2>
+                        <p>Complete the details below to open a direct booking request on WhatsApp</p>
+                    </div>
+
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="studentName">Full Name</label>
+                            <input type="text" id="studentName" placeholder="e.g. Alex Johnson" required>
                         </div>
-                    </div>
-                    <div class="file-list" id="fileList"></div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="studentClass">Class / Grade / Course</label>
+                                <input type="text" id="studentClass" placeholder="e.g. B.Tech / 12th Grade" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Select Service</label>
+                                <select id="serviceType" required>
+                                    <option value="" disabled selected>Choose a service...</option>
+                                    <option value="Editing & Formatting">Editing & Formatting</option>
+                                    <option value="Leave Letter Drafting">Leave Letter Drafting</option>
+                                    <option value="Handwritten Copying">Handwritten Copying</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentPhone">Phone Number</label>
+                            <input type="tel" id="studentPhone" placeholder="Your Phone Number" required>
+                        </div>
+
+                        <div class="info-notice-box">
+                            <p> Please send document photos/PDFs directly in WhatsApp after clicking Book Now.</p>
+                        </div>
+
+                        <button type="submit" class="submit-btn">BOOK VIA WHATSAPP</button>
+                    </form>
                 </div>
-
-                <button type="submit" class="submit-btn">
-                    <span>Book Now via WhatsApp</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </button>
-            </form>
-        </div>
-
-        <!-- Features Grid -->
-        <section class="features-grid">
-            <div class="feature-box">
-                <div class="feature-icon">⚡</div>
-                <h3>Quick Delivery</h3>
-                <p>On-time completion designed to match your deadlines without compromising quality.</p>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon">🔒</div>
-                <h3>100% Confidential</h3>
-                <p>Your details and assignments remain secure and private at all times.</p>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon">🎯</div>
-                <h3>High Accuracy</h3>
-                <p>Thoroughly researched, well-formatted work tailored to your class guidelines.</p>
             </div>
         </section>
 
@@ -115,7 +157,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 P² FREELANCING. All rights reserved.</p>
+        <p>&copy; 2026 P² FREELANCING. Owned & Managed by Sujan.</p>
     </footer>
 
     <script src="script.js"></script>
