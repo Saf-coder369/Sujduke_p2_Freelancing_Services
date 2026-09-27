@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P² FREELANCING | Academic & Homework Support</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand-logo">
+                <div class="logo-badge-text">P²</div>
+                <div class="brand-text">
+                    <span class="brand-name">P² FREELANCING</span>
+                    <span class="brand-tagline">All you need is payment & prototype</span>
+                </div>
+            </div>
+            <a href="#book-section" class="nav-cta">Book Assistance</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Fast & Reliable Academic Support</span>
+            <h1>Expert Assistance For Your Homework & Assignments</h1>
+            <p>Get accurate, well-structured solutions delivered on time. Attach your files, specify your requirements, and connect directly via WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- Booking Card -->
+        <div class="booking-card" id="book-section">
+            <div class="card-header">
+                <h2>Submit Your Assignment</h2>
+                <p>Fill in the details below to start your request instantly</p>
+            </div>
+
+            <form id="bookingForm" novalidate>
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" placeholder="e.g., Alex Johnson" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentClass">Class / Grade / Course</label>
+                        <input type="text" id="studentClass" placeholder="e.g., 10th Grade / B.Tech" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentPhone">Phone Number</label>
+                        <input type="tel" id="studentPhone" placeholder="Your WhatsApp Contact No." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload Assignment (Photos or PDF)</label>
+                    <div class="file-drop-zone" id="dropZone">
+                        <input type="file" id="assignmentFile" accept="image/*,.pdf,.doc,.docx" multiple>
+                        <div class="upload-content">
+                            <div class="upload-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                            </div>
+                            <p class="upload-text"><strong>Click to upload</strong> or drag and drop</p>
+                            <span class="upload-hint">PDF, DOC, DOCX, PNG, JPG (Multiple files supported)</span>
+                        </div>
+                    </div>
+                    <div class="file-list" id="fileList"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Book Now via WhatsApp</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <!-- Features Grid -->
+        <section class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h3>Quick Delivery</h3>
+                <p>On-time completion designed to match your deadlines without compromising quality.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔒</div>
+                <h3>100% Confidential</h3>
+                <p>Your details and assignments remain secure and private at all times.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h3>High Accuracy</h3>
+                <p>Thoroughly researched, well-formatted work tailored to your class guidelines.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 P² FREELANCING. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
